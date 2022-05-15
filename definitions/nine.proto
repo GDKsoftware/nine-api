@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package nine;
+
+import "google/protobuf/timestamp.proto";
+
+message Hello {
+    string identifier = 1;
+}
+
+message Position {
+    int32 x = 1;
+    int32 y = 2;
+    int32 z = 3;
+}
+
+message Onesecond {
+    google.protobuf.Timestamp ts = 1;
+
+    repeated Position positions = 2;
+}
