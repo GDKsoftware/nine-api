@@ -4,6 +4,10 @@
 
 This project provides definitions and a Python client module to send messages between a client and a server using [Protobuf](https://developers.google.com/protocol-buffers/docs/proto3) over UDP.
 
+## Prerequisites
+
+Follow the instructions [here](https://github.com/GDKsoftware/nine-api/blob/main/coral_devboard.md) - on how to setup the Dev Board.
+
 ## How does it work
 
 An example on how to use `nine_client.py` can be found in `test_client.py`
