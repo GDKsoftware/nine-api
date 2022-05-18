@@ -33,9 +33,11 @@ You can generate the files by running `make lib` on a Linux machine.
 * You're not able to use the python environment or caches from the Linux host on the dev board - so you cannot just `mdt push` the host files to the dev board
 * To copy the files, follow these steps:
   1. host: `make clean`
-  2. host: `mdt push .`
+  2. host: `mdt push . test`
   3. host: `mdt shell` - to login to the board
-  4. board: Connect an Ethernet cable to allow for Internet access
-  5. board: `make .env/.done`
-  6. board: Disconnect Ethernet cable
-  7. board: `make client`
+  4. board: `cd test`
+  5. board: Connect an Ethernet cable to allow for Internet access
+  6. board: `make .env/.done`
+  7. board: Disconnect Ethernet cable
+  8. board: `make client`
+* Note: if you connect the Ethernet cable before running mdt shell, you might be connected through the wrong IP, so remove it first so the communication goes through the USB cable
