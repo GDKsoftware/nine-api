@@ -27,3 +27,15 @@ You can generate the files by running `make lib` on a Linux machine.
 ## Testing
 
 * Run `make server` or `python3 test_server.py` to launch a test server, this will respond to basic discovery and other messages
+
+### Notes when testing
+
+* You're not able to use the python environment or caches from the Linux host on the dev board - so you cannot just `mdt push` the host files to the dev board
+* To copy the files, follow these steps:
+  1. host: `make clean`
+  2. host: `mdt push .`
+  3. host: `mdt shell` - to login to the board
+  4. board: Connect an Ethernet cable to allow for Internet access
+  5. board: `make .env/.done`
+  6. board: Disconnect Ethernet cable
+  7. board: `make client`
