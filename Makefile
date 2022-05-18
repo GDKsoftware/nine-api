@@ -19,7 +19,6 @@ $(SETUPPYTHON):
 
 $(VIRTUALENV_DONE): requirements.txt
 	$(SETUPPYTHON) -m venv $(VIRTUALENV)
-	$(VIRTUALENV)/bin/pip install --upgrade pip
 	$(VIRTUALENV)/bin/pip install -r requirements.txt
 	touch $(VIRTUALENV_DONE)
 
